@@ -58,6 +58,7 @@ input[type=date ] {
     width: 200px;
     padding: 3px;
     box-sizing: border-box;
+    border:none;
     border-radius: 6px;
     background-color: rgb(229, 243, 229);
     /* box-shadow: 10px 5px 5px #2d9e4b; */
@@ -293,4 +294,9 @@ color:black;
     margin-left:607px;
     margin-top: 10px;
 
+}
+.delete{
+    margin-left: 915px;
+    margin-bottom: 10px;
+    text-decoration: none;
 }

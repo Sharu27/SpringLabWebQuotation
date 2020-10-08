@@ -20,7 +20,7 @@
         e.preventDefault();
         if (x < max_fields) {
             x++;
-            $(wrapper).append('<div class="new-dynamic"> <select name="myInputs[]"> <option value="">Select Service</option> <option value="">Quotation-1</option> <option value="">Quotation-2</option><option value="">Quotation-3</option><option value="">Quotation-4</option> </select><div class="new-bill" name="div-bill"><input type="bill"  class="sum-bill" id="sum-bill"  name="myInputs[]" placeholder="service Cost" onkeypress="return onlyNumberKey(event)"><a href="#" class="delete" style="text-decoration: none;">&nbsp;Delete</a></div>'); //add input box
+            $(wrapper).append('<div><a href="#" class="delete">&nbsp;Delete</a><div class="new-dynamic"> <select name="myInputs[]"> <option value="">Select Service</option> <option value="">Quotation-1</option> <option value="">Quotation-2</option><option value="">Quotation-3</option><option value="">Quotation-4</option> </select><div class="new-bill" name="div-bill"><input type="bill"  class="sum-bill" id="sum-bill"  name="myInputs[]" placeholder="service Cost" onkeypress="return onlyNumberKey(event)"></div></div>'); //add input box
         } else {
             alert('You Reached the limits')
         }
@@ -38,7 +38,9 @@
         var total = 0;
         
         $('.sum-bill').each(function(){
+            if(!isNaN(this.value) && this.value.length!=0){
           total += parseFloat($(this).val());
+            }
         })  
       
         console.log(total)
@@ -63,13 +65,13 @@ $(document).ready(function() {
         e.preventDefault();
         if (y < max_field) {
             y++;
-            $(wrapper_1).append('<div></div><div class="new-input-dynamic"> &#9679 &nbsp;<input type="text" class="text" ><a href="#" class="delete" style="text-decoration: none;">Delete</a></div>'); //add input box
+            $(wrapper_1).append('<div></div><div class="new-input-dynamic"> &#9679 &nbsp;<input type="text" class="text" ><a href="#" class="delete1" style="text-decoration: none;">Delete</a></div>'); //add input box
         } else {
             alert('You Reached the limits')
         }
     });
 
-    $(wrapper_1).on("click", ".delete", function(e) {
+    $(wrapper_1).on("click", ".delete1", function(e) {
         e.preventDefault();
         $(this).parent('div').remove();
         y--;
@@ -86,6 +88,10 @@ $(document).ready(function() {
     var getCanvas;  
 
     $("#btn-Preview-Image").on('click', function() { 
+        $('.add_form_field').hide();
+        $('.add-button').hide();
+        $('.delete').hide();
+        $('.delete1').hide();
         html2canvas(element, { 
             onrendered: function(canvas) { 
                 $("#previewImage").append(canvas); 
@@ -93,7 +99,7 @@ $(document).ready(function() {
             } 
         }); 
     }); 
-
+   
     $("#btn-Convert-Html2Image").on('click', function() { 
         var imgageData =  
             getCanvas.toDataURL("image/png"); 
