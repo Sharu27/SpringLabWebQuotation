@@ -104,7 +104,7 @@ $(document).ready(function() {
         /^data:image\/png/, "data:application/octet-stream"); 
       
         $("#btn-Convert-Html2Image").attr( 
-        "download", "GeeksForGeeks.png").attr( 
+        "download", "Web-Quotation.png").attr( 
         "href", newData); 
     }); 
 }); 
