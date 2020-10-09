@@ -79,25 +79,37 @@ $(document).ready(function() {
 });
 
 
+
 $(document).ready(function() { 
+      $("#previewHead").hide();
+      $("#btn-Convert-Html2Image").hide();
+      $("#close").hide();
       
     // Global variable 
     var element = $("#target");  
   
     // Global variable 
     var getCanvas;  
-
+    
     $("#btn-Preview-Image").on('click', function() { 
         $('.add_form_field').hide();
         $('.add-button').hide();
         $('.delete').hide();
         $('.delete1').hide();
+        $("#previewHead").show();
+        $("#btn-Convert-Html2Image").show();
+      $("#close").show();
+        
         html2canvas(element, { 
             onrendered: function(canvas) { 
                 $("#previewImage").append(canvas); 
                 getCanvas = canvas; 
             } 
         }); 
+        
+        $('#target').hide();
+        $("#btn-Preview-Image").hide();
+        $("#previewImage").show();
     }); 
    
     $("#btn-Convert-Html2Image").on('click', function() { 
@@ -108,9 +120,31 @@ $(document).ready(function() {
         // it instead of just showing it 
         var newData = imgageData.replace( 
         /^data:image\/png/, "data:application/octet-stream"); 
+        
+        
       
-        $("#btn-Convert-Html2Image").attr( 
+       $("#btn-Convert-Html2Image").attr( 
         "download", "Web-Quotation.png").attr( 
         "href", newData); 
     }); 
+
+
+
 }); 
+$(document).ready(function(){
+    $("#close").on('click',function(){
+        $('#target').show();
+          $("#previewImage").hide();
+          $("#previewImage").empty();
+          $('#btn-Preview-Image').show();
+          $('.add_form_field').show();
+          $('.add-button').show();
+          $('.delete').show();
+          $('.delete1').show();
+          $("#previewHead").hide();
+          $("#btn-Convert-Html2Image").hide();
+          $("#close").hide();
+    
+    
+      })
+});

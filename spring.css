@@ -286,13 +286,17 @@ color:black;
 }
 
 #btn-Preview-Image{
-    color: black;
+    
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
     background-color: lightblue;
     margin-left:607px;
     margin-top: 10px;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color:blue;
 
 }
 .delete{
@@ -300,3 +304,16 @@ color:black;
     margin-bottom: 10px;
     text-decoration: none;
 }
+#close{
+    color: black;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    margin-left:607px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
