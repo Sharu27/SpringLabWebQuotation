@@ -35,10 +35,13 @@ img{
 
 }
 .website_qut{
-    font-size: 52px;
+    font-size: 55px;
     color:#2d9e4b ;
     margin-top: 48px;
     text-align: center;
+    background-color: honeydew;
+    border: none;
+    font-family: Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
     /* text-decoration: #2d9e4b underline ; */
 }
 
@@ -46,24 +49,29 @@ img{
     font-size: 23px;
     margin-top: 50px;
     margin-left: 315px;
+    font-weight: bold;
     /* text-decoration: #2d9e4b underline; */
 }
 .date-1{
     margin-left: 1000px;
     border: none;
     padding: 10px;
+    font-size:16px;
 
 }
 input[type=date ] {
     width: 200px;
     padding: 3px;
+    font-size:17px;
     box-sizing: border-box;
     border:none;
     border-radius: 6px;
-    background-color: rgb(229, 243, 229);
+    background-color:honeydew;
+    /* rgb(229, 243, 229) */
     /* box-shadow: 10px 5px 5px #2d9e4b; */
     opacity: 0.9;
-    font-size: 15px;
+    font-family:Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
+
  }
  .name{
      margin-left: 300px;
@@ -74,10 +82,11 @@ input[type=date ] {
      box-sizing: border-box;
      border: none;
      border-radius: 8px;
-     background-color:  rgb(229, 243, 229);
+     background-color: honeydew;
      /* box-shadow: 10px 5px 5px #2d9e4b; */
      opacity: 0.9;
-     font-size: 15px;
+     font-size: 19px;
+     font-family:Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
 
  }
  .select{
@@ -86,11 +95,13 @@ input[type=date ] {
     box-sizing: border-box;
     border: none;
     border-radius: 8px;
-    background-color: rgb(229, 243, 229);
+    background-color: honeydew;
     /* box-shadow: honeydew; */
     opacity: 0.9;
     /* box-shadow: 10px 5px 5px #2d9e4b; */
-    font-size: 15px;
+    font-size: 17px;
+    font-family:Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
+
 
  }
  #phone{
@@ -102,10 +113,11 @@ input[type=date ] {
     box-sizing: border-box;
     border: none;
     border-radius: 8px;
-    background-color:  rgb(229, 243, 229);
+    background-color:  honeydew;
     /* box-shadow: 10px 5px 5px #2d9e4b; */
     opacity: 0.9;
-    font-size: 15px;
+    font-size: 17px;
+    font-family:Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
 
 
 }
@@ -113,16 +125,17 @@ input[type=date ] {
 #email{
     margin-left: 300px;
  }
- input[type=email]{
+ input[type=textmail]{
     width: 280px;
     padding: 6px;
     box-sizing: border-box;
     border: none;
     border-radius: 8px;
-    background-color: rgb(229, 243, 229);
+    background-color:honeydew;
     /* box-shadow: 10px 5px 5px #2d9e4b; */
     opacity: 0.9;
-    font-size: 15px;
+    font-size: 17px;
+    font-family:Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
 
 }
 
@@ -253,7 +266,7 @@ color:black;
     box-sizing: border-box;
     border: none;
     border-radius: 8px;
-    background-color: rgb(229, 243, 229);
+    background-color:honeydew;
     /* box-shadow: 10px 5px 5px #2d9e4b; */
     opacity: 0.9;
     font-size: 18px;
@@ -266,7 +279,7 @@ color:black;
     box-sizing: border-box;
     border: none;
     border-radius: 8px;
-    background-color:rgb(229, 243, 229);
+     background-color:honeydew;
     /* box-shadow: 10px 5px 5px #2d9e4b; */
     opacity: 0.9;
     font-size: 18px;
@@ -290,13 +303,13 @@ color:black;
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
-    background-color: lightblue;
+    background-color: blue;
     margin-left:607px;
     margin-top: 10px;
     padding: 5px;
     font-size: 20px;
     cursor: pointer;
-    color:blue;
+    color:whitesmoke;
 
 }
 .delete{
@@ -305,7 +318,7 @@ color:black;
     text-decoration: none;
 }
 #close{
-    color: black;
+    color:whitesmoke;
     box-sizing: border-box;
     border: none;
     border-radius: 5px;

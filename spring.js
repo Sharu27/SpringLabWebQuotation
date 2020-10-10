@@ -20,7 +20,7 @@
         e.preventDefault();
         if (x < max_fields) {
             x++;
-            $(wrapper).append('<div><a href="#" class="delete">&nbsp;Delete</a><div class="new-dynamic"> <select name="myInputs[]"> <option value="">Select Service</option> <option value="">Quotation-1</option> <option value="">Quotation-2</option><option value="">Quotation-3</option><option value="">Quotation-4</option> </select><div class="new-bill" name="div-bill"><input type="bill"  class="sum-bill" id="sum-bill"  name="myInputs[]" placeholder="service Cost" onkeypress="return onlyNumberKey(event)"></div></div>'); //add input box
+            $(wrapper).append('<div><a href="#" class="delete">&nbsp;Delete</a><div class="new-dynamic"> <select name="myInputs[]"> <option value="NO!..your not selected any services">Select Service</option> <option value="Quotation-1">Quotation-1</option> <option value="Quotation-2">Quotation-2</option><option value="Quotation-3">Quotation-3</option><option value="Quotation-4">Quotation-4</option> </select><div class="new-bill" name="div-bill"><input type="bill"  class="sum-bill" id="sum-bill"  name="myInputs[]" placeholder="service Cost" onkeypress="return onlyNumberKey(event)"></div></div>'); //add input box
         } else {
             alert('You Reached the limits')
         }
@@ -29,7 +29,8 @@
     $(wrapper).on("click", ".delete", function(e) {
         e.preventDefault();
         $(this).parent('div').remove();
-        x--;
+        $('#sum').empty();
+         x--;
     })
 
 
@@ -44,15 +45,19 @@
         })  
       
         console.log(total)
-        $("#sum").html(total.toFixed(2));
+        // $("#sum").html(total.toFixed(2));
+        $("#sum").html(new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: 'INR'
+          }).format(total.toFixed(2)));
+
       })
-
-
-
-
-    //   ---------------------
-
-     
+    //   $('.ec-bill input[type=bill]').on('keyup',function(e){
+    //     var oldstr=$('.ec-bill input[type=bill]').val();
+    //     var tokens = oldstr.split('/-');
+    //     var suffix = tokens.pop() + '/-';
+    //     var prefix = tokens.join("");
+    //     $('.ec-bill input[type=bill]').val(prefix+suffix);  
 });
 
 $(document).ready(function() {
