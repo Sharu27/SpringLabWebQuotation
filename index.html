@@ -54,7 +54,7 @@
                 <input type="text" name="adrress" id="adrress" placeholder="enter your address" style="font-size: 15px;"></br>
                 <input type="text" name="adrress" id="adrress" placeholder="enter your address" style="font-size: 15px;"></div></br>
                 <div>
-                    <input type="text" name="phone" id="phone" style="font-size: 15px;" placeholder="phone number" maxlength="10" onkeypress="return onlyNumberKey(event)"></br>
+                    <input type="text" name="phone" id="phone" style="font-size: 15px;" placeholder="phone number"  minlength="10" maxlength="10" onkeypress="return onlyNumberKey(event)"></br>
                 <input type="textmail" name="email" id="email" placeholder="email address" style="font-size: 15px;">
                 </div>
         </main>
@@ -68,7 +68,7 @@
                  <div id="dynamicInput" class="dynamic-input">
                      <!-- <input type="text" name="myInputs[]" placeholder="enter a service detail"> -->
                      <select name="myInputs[]" required>
-                         <option value="NO!..your not selected any services">Select Service</option>
+                         <option value=" Select-services">Select-services </option>
                          <option value="Quotation-1">Quotation-1</option>
                          <option value="Quotation-2">Quotation-2</option>
                          <option value="Quotation-3">Quotation-3</option>
@@ -99,18 +99,25 @@
             
            
     </div>
- 
-    <h3 id="previewHead">Preview :</h3> 
+    <div>
+        <p id="previewHead">Preview :</p> 
+    <div><button id="close" title="want go-back to quotation page click close"> X</button></div>
+    </div>
+    
     <div id="previewImage"></div> 
 <input id="btn-Preview-Image" type="button"
 value="Preview" />  
 
-<button id="close">
-    Close
-</button>
-<a id="btn-Convert-Html2Image" href="#" style="text-decoration: none; color: blue; "> 
-Download <span style="color: blue;"> &#8595;</span>
-</a> 
+
+
+<div>
+    <a id="btn-Convert-Html2Image" title="click here to download preview image" > 
+        Download  image
+    
+        <!-- <span style="color: blue;"> &#8595;</span> -->
+    </a>
+</div>
+
 
 <br/> 
 
@@ -120,7 +127,25 @@ Download <span style="color: blue;"> &#8595;</span>
 
 
 
+
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script> -->
 <script src="spring.js"> </script> 
+<script>
+
+
+// var doc = new jsPDF();
+//     var elementHTML = $('#contnet').html();
+//     var specialElementHandlers = {
+//         '#pdf-conversion': function (element, renderer) {
+//             return true;
+//         }
+//     };
+//     doc.fromHTML(elementHTML, 15, 15, {
+//         'width': 170,
+//         'elementHandlers': specialElementHandlers
+//     });
+    
+//     // Save the PDF
+//     doc.save('sample-document.pdf');</script>
 </body>
 </html>

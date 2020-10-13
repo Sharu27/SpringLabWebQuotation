@@ -1,10 +1,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@media only screen and (max-width: 600px) {
-    body{
-        
-    }
-}
+
 
 body{
     margin: 0%;
@@ -12,6 +8,7 @@ body{
     background-color:honeydew;
     font-family:Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
+
 header{
     background-color: #2d9e4b;
     height: 90px;
@@ -19,7 +16,7 @@ header{
     align-items: center;
     flex-flow: row wrap;
     padding: 10px;
-    /* width: 100%; */
+    width: 100%;
 
 }
 header h1{
@@ -89,21 +86,21 @@ input[type=date ] {
      font-family:Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
 
  }
- .select{
+ /* .select{
     width: 80px;
     padding: 6px;
     box-sizing: border-box;
     border: none;
     border-radius: 8px;
     background-color: honeydew;
-    /* box-shadow: honeydew; */
+    box-shadow: honeydew;
     opacity: 0.9;
-    /* box-shadow: 10px 5px 5px #2d9e4b; */
+    box-shadow: 10px 5px 5px #2d9e4b;
     font-size: 17px;
     font-family:Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
 
 
- }
+ } */
  #phone{
     margin-left: 300px;
  }
@@ -310,12 +307,18 @@ color:black;
     font-size: 20px;
     cursor: pointer;
     color:whitesmoke;
-
+    margin-bottom: 20px;
+    box-shadow: 10px 5px 5px rgb(113, 137, 204);
 }
 .delete{
     margin-left: 915px;
     margin-bottom: 10px;
     text-decoration: none;
+}
+#previewHead{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 600px;
 }
 #close{
     color:whitesmoke;
@@ -323,10 +326,25 @@ color:black;
     border: none;
     border-radius: 5px;
     background-color: red;
-    margin-left:607px;
-    margin-top: 10px;
+    margin-left:1360px;
+    margin-top: -70px;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 10px 5px 5px rgb(230, 120, 120);
+}
+
+#btn-Convert-Html2Image{
+    margin-bottom: 20px;
+    margin-left: 600px;
+    color: whitesmoke;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
     padding: 5px;
     font-size: 20px;
     cursor: pointer;
+    background-color: green;
+    box-shadow: 10px 5px 5px green;
 }
 
